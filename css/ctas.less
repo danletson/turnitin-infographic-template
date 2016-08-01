@@ -1,0 +1,104 @@
+.cta-style{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: .25em 1em;
+    margin: @spacing/2;
+    background-image: none !important;
+    .primaryFace(@bold, normal);
+    .border-radius;
+    .animateFast;
+}
+
+.cta(@color1: @blue, @color2: @blue-dark, @size: 1.125rem){
+    .cta-style;
+    font-size: @size;
+    color: white;
+    background: @color1;
+    border: 1px solid @color1;
+    &:hover{
+        background: @color2;
+        border: 1px solid @color2;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+.cta--reverse(@color1: @blue, @color2: @blue-dark, @size: 1.125rem){
+    .cta-style;
+    font-size: @size;
+    background: none;
+    color: @color1;
+    border: 1px solid @color1;
+    &:hover{
+        background: @color2;
+        border: 1px solid tranparent;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.cta--blue--reverse{
+    .cta--reverse(@blue, @blue-dark, 1.125rem);
+}
+
+.cta--white--reverse{
+    .cta-style;
+    font-size: 1.125rem;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    &:hover{
+        background: white;
+        border: 1px solid tranparent;
+        color: @blue;
+        text-decoration: none;
+    }
+}
+
+
+.cta--blue, .btn.btn-primary{
+    .cta(@blue, @blue-dark, 1.125rem);
+    &:focus{
+        color: white;
+    }
+}
+
+.cta--amber{
+    .cta(@amber, @amber-dark, 1.125rem);
+    &:focus{
+        color: white;
+    }
+}
+
+.cta--red{
+    .cta(@red, @red-dark, 1.125rem);
+    &:focus{
+        color: white;
+    }
+}
+
+.cta--purple{
+    .cta(@deep-purple, @deep-purple-dark, 1.125rem);
+    &:focus{
+        color: white;
+    }
+}
+.cta--blue-green{
+    .cta(@blue-green, @blue-green-dark, 1.125rem);
+    &:focus{
+        color: white;
+    }
+}
+.cta--white{
+    .cta(@blue-green, @blue-green-dark, 1.125rem);
+    &:focus{
+        color: blue;
+    }
+}
+
+.getAQuote{
+    .cta;
+    margin-bottom: @spacing;
+}
